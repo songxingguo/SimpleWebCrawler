@@ -41,19 +41,19 @@
         $.ajax({   //开始发送ajax请求至路径 /getJobs  进而作页面抓取处理
             dataType: "json",
             type: "get",
-            url: "/json",
+            url: "/getJobs",
             success: function(data){   //收到返回的json数据
                 console.log(data);
                 var html = "";
                 $(".container").empty();
-                if(data.jobs.length == 0){
+                if(data.infos.length == 0){
                     alert("Error2: 未找到数据..");
                     return;
                 }
                 for(var i=0;i<data.infos.length;i++){   //遍历数据并提取处理
                     var info = data.infos[i];
                     html += "<div class='jobs'><p><span >岗位序号：</span>  "+((i+1)+15*(currentPage-1))+"</p>"+
-                        "<p>标题：<a href='"+job.src+"'target='_blank'>"+info.title+"</a></p>"+
+                        "<p>标题：<a href='"+info.src+"'target='_blank'>"+info.title+"</a></p>"+
                         "</div>"
                 }
 
