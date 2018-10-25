@@ -41,7 +41,7 @@
         $.ajax({   //开始发送ajax请求至路径 /getJobs  进而作页面抓取处理
             dataType: "json",
             type: "get",
-            url: "/getJobs",
+            url: "/getNotices",
             success: function(data){   //收到返回的json数据
                 console.log(data);
                 var html = "";

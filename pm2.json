@@ -6,7 +6,8 @@
   "watch": true,
   "ignore_watch": ["tmp"],
   "env": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "PORT": "443"
   },
   "engines": {
     "node": ">=7.6"
